@@ -1,4 +1,15 @@
 ```mermaid
-sequenceDiagram
-    Alice->>+John: Xin chào John
-    John-->>-Alice: Chào Alice
+classDiagram
+    class User {
+        -String id
+        -String email
+        +login()
+        +logout()
+    }
+    
+    class Admin {
+        -String role
+        +deleteUser()
+    }
+    
+    User <|-- Admin : Kế thừa
